@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   timesketch:
-    image: aorlikoski/skadi_timesketch:1.2
+    image: aorlikoski/skadi_timesketch:20190326
     container_name: timesketch
     ports:
       - 127.0.0.1:5000:5000
@@ -23,7 +23,7 @@ services:
     restart: always
 
   postgres:
-    image: postgres:10
+    image: postgres:11
     container_name: postgres
     cpus: .1
     mem_reservation: 100m
@@ -51,6 +51,17 @@ services:
       - esnet
     restart: always
 
+  mongodb:
+    image: mongo:4.1-bionic
+    container_name: mongodb
+    cpus: .1
+    mem_reservation: 100m
+    ports:
+      - 127.0.0.1:8081:8081
+    networks:
+      - esnet
+    restart: always
+
   neo4j:
     image: neo4j:3.5
     container_name: neo4j
@@ -60,7 +71,7 @@ services:
       - 127.0.0.1:7474:7474
       - 127.0.0.1:7687:7687
     environment:
-      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+      - NEO4J_AUTH=none
     volumes:
       - neo4jdata:/var/lib/neo4j/data
     networks:
@@ -68,7 +79,7 @@ services:
     restart: always
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.6.2
     container_name: elasticsearch
     ports:
       - 127.0.0.1:9200:9200
@@ -77,7 +88,7 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - "ES_JAVA_OPTS=-Xms${HEAP_SIZE} -Xmx${HEAP_SIZE}"
     ulimits:
       memlock:
         soft: -1
@@ -89,7 +100,7 @@ services:
     restart: always
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:6.5.1
+    image: docker.elastic.co/kibana/kibana:6.6.2
     container_name: kibana
     ports:
       - 127.0.0.1:5601:5601
@@ -115,7 +126,7 @@ services:
     restart: always
 
   cyberchef:
-    image: aorlikoski/skadi_cyberchef:latest
+    image: aorlikoski/skadi_cyberchef:20190326
     container_name: cyberchef
     ports:
       - 127.0.0.1:8000:8000
@@ -144,6 +155,106 @@ services:
     mem_reservation: 100m
     restart: always
 
+  portainer:
+    image: portainer/portainer:1.20.2
+    container_name: portainer
+    volumes:
+      - portainerdata:/data portainer/portainer
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command: --no-auth
+    pid: host
+    networks:
+      - ccnet
+    ports:
+      - 127.0.0.1:7000:9000
+    cpus: .2
+    mem_reservation: 200m
+    restart: always
+
+  yeti:
+    image: aorlikoski/skadi_yeti:20190327
+    ports:
+      - "127.0.0.1:8080:8080"
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'uwsgi']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+  yeti-feeds:
+    image: aorlikoski/skadi_yeti:20190327
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'feeds']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+      - yeti
+    environment:
+      - TLDEXTRACT_CACHE=/tmp/tldextract.cache
+  yeti-analytics:
+    image: aorlikoski/skadi_yeti:20190327
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'analytics']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+      - yeti
+    environment:
+      - TLDEXTRACT_CACHE=/tmp/tldextract.cache
+  yeti-beat:
+    image: aorlikoski/skadi_yeti:20190327
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'beat']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+      - yeti
+  yeti-exports:
+    image: aorlikoski/skadi_yeti:20190327
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'exports']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+      - yeti
+  yeti-oneshot:
+    image: aorlikoski/skadi_yeti:20190327
+    links:
+      - redis
+      - mongodb
+    command: ['docker-entrypoint.sh', 'oneshot']
+    networks:
+      - esnet
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+      - yeti
+
 volumes:
   esdata1:
     driver: local
@@ -154,6 +265,8 @@ volumes:
   redisdata:
     driver: local
   tssockets:
+    driver: local
+  portainerdata:
     driver: local
 
 networks:

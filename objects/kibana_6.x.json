@@ -1,12 +1,12 @@
 [
   {
-    "_id": "IR_06-Persistence-slash-Prefetch",
+    "_id": "445be4b0-3704-11e8-a971-414e54e085c1",
     "_type": "dashboard",
     "_source": {
-      "title": "Prefetch",
+      "title": "Appcompat",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":6,\"i\":\"3\"},\"id\":\"Prefetch\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"1\"},\"id\":\"Appcompat\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
@@ -19,13 +19,51 @@
     }
   },
   {
-    "_id": "IR_03-Ant-Virus-slash-FIrewall",
+    "_id": "IR_02-General-Information",
     "_type": "dashboard",
     "_source": {
-      "title": "FIrewall",
+      "title": "Windows System and User Information",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"2\"},\"id\":\"Firewall\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":5,\"y\":0,\"w\":7,\"h\":6,\"i\":\"2\"},\"id\":\"User-Information\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":0,\"w\":5,\"h\":6,\"i\":\"3\"},\"version\":\"6.2.3\",\"type\":\"visualization\",\"id\":\"e306a2d0-35f6-11e8-bb5c-418087d19514\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4a0196a0-3603-11e8-abe3-892c2e94b163",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Persistence",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":5,\"i\":\"1\"},\"id\":\"Persistence\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "76162600-3704-11e8-a971-414e54e085c1",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Ant-Virus",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"1\"},\"id\":\"Anti-Virus\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
@@ -38,56 +76,18 @@
     }
   },
   {
-    "_id": "f7a91780-35ca-11e8-b33b-ff969cd97ce8",
+    "_id": "c9570d00-3602-11e8-abe3-892c2e94b163",
     "_type": "dashboard",
     "_source": {
-      "title": "Torrents",
+      "title": "Linux Items",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":8,\"h\":5,\"i\":\"1\"},\"version\":\"6.2.3\",\"type\":\"visualization\",\"id\":\"dfa77640-35ca-11e8-b33b-ff969cd97ce8\"}]",
-      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
-    "_id": "IR_05-Linux-slash-Mac",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Mac Items",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"2\"},\"id\":\"MAC\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":5,\"i\":\"1\"},\"id\":\"Linux\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
-    "_id": "IR_01-Parser-Details",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Data Sources",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":25,\"w\":48,\"h\":15,\"i\":\"1\"},\"id\":\"Parser-Results\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":25,\"i\":\"2\"},\"version\":\"6.4.2\",\"type\":\"visualization\",\"id\":\"3184b570-3604-11e8-abe3-892c2e94b163\"}]",
-      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}},\"highlightAll\":true,\"version\":true}"
       }
     },
     "_meta": {
@@ -272,24 +272,6 @@
     }
   },
   {
-    "_id": "MAC",
-    "_type": "visualization",
-    "_source": {
-      "title": "MacOS",
-      "visState": "{\"title\":\"MacOS\",\"type\":\"table\",\"params\":{\"perPage\":100,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"message.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"MacOS Messages (Up to  1,000 entries shown)\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"parser.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"Parser\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"datetime\",\"customLabel\":\"Latest Activity\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"datetime\",\"customLabel\":\"Earliest Activity\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "savedSearchId": "Mac",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
     "_id": "Internet-History",
     "_type": "visualization",
     "_source": {
@@ -301,6 +283,24 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "MAC",
+    "_type": "visualization",
+    "_source": {
+      "title": "MacOS",
+      "visState": "{\"title\":\"MacOS\",\"type\":\"table\",\"params\":{\"perPage\":100,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"message.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"MacOS Messages (Up to  1,000 entries shown)\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"parser.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"Parser\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"datetime\",\"customLabel\":\"Latest Activity\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"datetime\",\"customLabel\":\"Earliest Activity\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "Mac",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
       }
     },
     "_meta": {
@@ -326,29 +326,6 @@
     }
   },
   {
-    "_id": "Appcompatcache",
-    "_type": "search",
-    "_source": {
-      "title": "Appcompatcache",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "_source"
-      ],
-      "sort": [
-        "datetime",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":{\"query_string\":{\"query\":\"parser:appcompatcache\",\"analyze_wildcard\":true}},\"language\":\"lucene\"}}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
     "_id": "Anti-Virus",
     "_type": "search",
     "_source": {
@@ -365,6 +342,29 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":\"parser:mcafee_protection* OR parser:symantec_scanlog* OR parser:winfirewall* OR parser:ccleaner*\",\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Appcompatcache",
+    "_type": "search",
+    "_source": {
+      "title": "Appcompatcache",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "datetime",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":{\"query_string\":{\"query\":\"parser:appcompatcache\",\"analyze_wildcard\":true}},\"language\":\"lucene\"}}"
       }
     },
     "_meta": {
@@ -489,29 +489,6 @@
     }
   },
   {
-    "_id": "Windows-Event-Logs",
-    "_type": "search",
-    "_source": {
-      "title": "Windows Event Logs",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "_source"
-      ],
-      "sort": [
-        "datetime",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":\"parser:winevt*\",\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
     "_id": "USNJRNL",
     "_type": "search",
     "_source": {
@@ -581,6 +558,29 @@
     }
   },
   {
+    "_id": "Windows-Event-Logs",
+    "_type": "search",
+    "_source": {
+      "title": "Windows Event Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "datetime",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":\"parser:winevt*\",\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
     "_id": "7a9bca50-35f5-11e8-bb5c-418087d19514",
     "_type": "search",
     "_source": {
@@ -623,13 +623,13 @@
     }
   },
   {
-    "_id": "445be4b0-3704-11e8-a971-414e54e085c1",
+    "_id": "IR_06-Persistence-slash-Prefetch",
     "_type": "dashboard",
     "_source": {
-      "title": "Appcompat",
+      "title": "Prefetch",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"1\"},\"id\":\"Appcompat\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":6,\"i\":\"3\"},\"id\":\"Prefetch\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
@@ -642,51 +642,13 @@
     }
   },
   {
-    "_id": "IR_02-General-Information",
+    "_id": "IR_03-Ant-Virus-slash-FIrewall",
     "_type": "dashboard",
     "_source": {
-      "title": "Windows System and User Information",
+      "title": "FIrewall",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":5,\"y\":0,\"w\":7,\"h\":6,\"i\":\"2\"},\"id\":\"User-Information\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":0,\"w\":5,\"h\":6,\"i\":\"3\"},\"version\":\"6.2.3\",\"type\":\"visualization\",\"id\":\"e306a2d0-35f6-11e8-bb5c-418087d19514\"}]",
-      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
-    "_id": "4a0196a0-3603-11e8-abe3-892c2e94b163",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Persistence",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":5,\"i\":\"1\"},\"id\":\"Persistence\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
-      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
-    "_id": "76162600-3704-11e8-a971-414e54e085c1",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Ant-Virus",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"1\"},\"id\":\"Anti-Virus\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"2\"},\"id\":\"Firewall\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
@@ -699,13 +661,51 @@
     }
   },
   {
-    "_id": "c9570d00-3602-11e8-abe3-892c2e94b163",
+    "_id": "IR_01-Parser-Details",
     "_type": "dashboard",
     "_source": {
-      "title": "Linux Items",
+      "title": "Data Sources",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":5,\"i\":\"1\"},\"id\":\"Linux\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":25,\"w\":48,\"h\":15,\"i\":\"1\"},\"id\":\"Parser-Results\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":25,\"i\":\"2\"},\"version\":\"6.4.2\",\"type\":\"visualization\",\"id\":\"3184b570-3604-11e8-abe3-892c2e94b163\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f7a91780-35ca-11e8-b33b-ff969cd97ce8",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Torrents",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":8,\"h\":5,\"i\":\"1\"},\"version\":\"6.2.3\",\"type\":\"visualization\",\"id\":\"dfa77640-35ca-11e8-b33b-ff969cd97ce8\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "IR_05-Linux-slash-Mac",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Mac Items",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"2\"},\"id\":\"MAC\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
       "version": 1,
       "timeRestore": false,
@@ -765,6 +765,29 @@
     }
   },
   {
+    "_id": "MFT-Results",
+    "_type": "search",
+    "_source": {
+      "title": "MFT",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "datetime",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"query\":{\"query\":\"parser:mft\",\"language\":\"lucene\"},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
     "_id": "Scheduled-Tasks",
     "_type": "search",
     "_source": {
@@ -804,29 +827,6 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":\"parser:winreg*\",\"language\":\"lucene\"},\"highlightAll\":true,\"version\":true}"
-      }
-    },
-    "_meta": {
-      "savedObjectVersion": 2
-    }
-  },
-  {
-    "_id": "MFT-Results",
-    "_type": "search",
-    "_source": {
-      "title": "MFT",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "_source"
-      ],
-      "sort": [
-        "datetime",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"06876cd0-dfc5-11e8-bc06-31e345541948\",\"query\":{\"query\":\"parser:mft\",\"language\":\"lucene\"},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"highlightAll\":true,\"version\":true}"
       }
     },
     "_meta": {
@@ -914,6 +914,25 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4138bc10-236f-11e9-87d7-095fcc7dc54e",
+    "_type": "dashboard",
+    "_source": {
+      "title": "All Windows",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"x\":24,\"y\":30,\"w\":24,\"h\":15,\"i\":\"1\"},\"version\":\"6.5.1\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"id\":\"Windows-Event-Logs\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":24,\"y\":15,\"w\":24,\"h\":15,\"i\":\"2\"},\"version\":\"6.5.1\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"id\":\"Prefetch\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":0,\"y\":15,\"w\":24,\"h\":15,\"i\":\"3\"},\"version\":\"6.5.1\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"id\":\"Persistence\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"4\"},\"version\":\"6.5.1\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"id\":\"User-Information\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":0,\"y\":30,\"w\":24,\"h\":15,\"i\":\"5\"},\"version\":\"6.5.1\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"id\":\"Internet-History\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"6\"},\"version\":\"6.5.1\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"id\":\"e306a2d0-35f6-11e8-bb5c-418087d19514\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     },
     "_meta": {
