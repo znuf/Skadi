@@ -6,10 +6,7 @@ cdqr_version=${CDQR_VERSION:-"4.4.0"}
 install_branch=${INSTALL_BRANCH:-"master"}
 
 echo "Updating OS"
-sudo apt-get -y update
-sudo apt-get -y install wget curl
-sudo apt-get -y dist-upgrade
-sudo apt-get -y autoremove
+sudo yum -y update && sudo yum -y install wget curl && sudo yum autoremove
 
 # Installs and Configures CDQR and CyLR
 echo "Updating CDQR"
