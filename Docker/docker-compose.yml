@@ -163,8 +163,8 @@ services:
     container_name: portainer
     volumes:
       - portainerdata:/data portainer/portainer
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    command: --no-auth
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --no-auth --host=unix:///var/run/docker.sock
     pid: host
     networks:
       - ccnet
