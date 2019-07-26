@@ -316,9 +316,8 @@ services:
       - ./grafana/grafana/setup.sh:/setup.sh
     entrypoint: /setup.sh
     environment:
-      - GF_AUTH_PROXY_ENABLED=true
-      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER}
-      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_AUTH_BASIC_ANONYMOUS=true
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s/grafana/
     restart: unless-stopped
