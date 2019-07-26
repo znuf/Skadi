@@ -149,7 +149,7 @@ services:
     restart: unless-stopped
 
   portainer:
-    image: portainer/portainer:1.21.0
+    image: portainer/portainer:1.22.0
     container_name: portainer
     volumes:
       - portainerdata:/data portainer/portainer
@@ -307,7 +307,7 @@ services:
       - backend
 
   grafana:
-    image: grafana/grafana:5.4.2
+    image: grafana/grafana:5.4.3
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
